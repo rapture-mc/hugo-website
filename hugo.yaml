@@ -1,0 +1,35 @@
+baseURL: https://megacorp.industries/
+languageCode: en-us
+title: Megacorp Industries
+theme: risotto
+
+menu:
+  main:
+    - identifier: services
+      name: Services
+      url: /services
+      weight: 10
+    - identifier: posts
+      name: Posts
+      url: /posts/
+      weight: 20
+
+params:
+  noindex: false
+  theme:
+    palette: tokyo-night-dark
+  about:
+    title: Megacorp Industries
+    description: "![Megacorp Logo](/logo.webp) Linux/NixOS enthusiast who writes and also provides Linux services!"
+  socialLinks:
+    - icon: fa-brands fa-github
+      title: GitHub
+      url: https://github.com/rapture-mc
+    - icon: fa-solid fa-envelope
+      title: Email
+      url: mailto:ben.harris@megacorp.industries
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: true

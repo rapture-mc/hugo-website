@@ -1,0 +1,34 @@
+<link rel="stylesheet" href="/styles.css">
+<nav class="page__nav main-nav">
+    <ul>
+      <li class="nomarker">
+        <h1 class="page__logo">
+          <a style="max-width:280px; width:280px" href="{{ .Site.BaseURL }}" class="page__logo-inner" class="typedText">
+            <span class="navbar-logo">
+              <span id="typedText"></span>
+            </span>
+            <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+            <script>
+              var typed = new Typed("#typedText", {
+                strings: [
+                    "{{ .Site.Title }}",
+                    "linux technologies...",
+                    "linux anonymity",
+                    "linux posts...",
+                    "linux everything!"
+                  ],
+                  typeSpeed: 150,
+                  backSpeed: 75,
+                  smartBackspace: true,
+                  loop: true
+              })
+            </script>
+          </a>
+        </h1>
+      </li>
+    {{ $currentPage := . }}
+    {{ range .Site.Menus.main }}
+    <li class="main-nav__item"><a class="nav-main-item{{ if or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) (eq ($currentPage.Permalink) (.URL | absLangURL)) }} active{{end}}" href="{{ .URL | absLangURL }}" title="{{ .Title }}">{{ .Name }}</a></li>
+    {{ end }}
+    </ul>
+</nav>
