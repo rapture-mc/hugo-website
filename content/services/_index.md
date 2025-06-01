@@ -22,7 +22,7 @@ Solutions (to name a few) such as:
 > - secure (encryption at rest and in transit)
 > - fast
 
-> [Guacamole](https://guacamole.apache.org/) (remote desktop solutionn)
+> [Guacamole](https://guacamole.apache.org/) (remote desktop solution)
 > - web-based, access from anywhere
 > - clientless
 > - cross-platform support
