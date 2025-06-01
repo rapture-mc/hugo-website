@@ -69,3 +69,7 @@ The above code will:
 3. Create the /var/www/megacorp.industries directory if it doesn't already exist 
 4. Copy the generated static files to the /var/www/megacorp.industries directory
 5. Set the approrpiate permissions on the directory so nginx can serve the files
+
+The main problem with this solution though is getting the hash value for the function fetchFromGitHub. To find the hash I first have to set it to an empty string which will then make the rebuild fail but subsequently output the correct hash. Since I'm using a GitOps approach this requires 2x commit's (one commit with an empty string for the hash then a second commit with the actual hash) where 1x should suffice.
+
+Also note that the above code is a snippet of my full reverse proxy configuration, so things like "services.nginx.enable = true" + "security.acme.acceptTerms = true" are missing and should be included if you're going to use this code. See my [github repo](https://github.com/rapture-mc/mgc-machines) for the full configuration.
