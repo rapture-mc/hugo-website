@@ -61,7 +61,7 @@ in {
     wantedBy = ["multi-user.target"];
   };
 }
-{{< /highlight nix >}}
+{{< /highlight >}}
 
 The above code will:
 1. Download the hugo website git repo using fetchFromGitHub
