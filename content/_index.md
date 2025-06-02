@@ -10,7 +10,7 @@ Also bringing Linux to the desktop for the masses! Reap the benefits of open-sou
 ---
 
 # Preview of a Megacorp Linux-based System pre equipped with an arsenal of privacy tools.
-{{ compress }}
+{{< compress >}}
 
 ---
 
