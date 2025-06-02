@@ -1,0 +1,5 @@
+{{ $asset := resources.Get "/desktop.png" }}
+{{ $img := $asset.Fit "600x400" }}
+<figure class="image is-3by2">
+  <img alt="desktop" src="{{ $img.RelPermalink }}" />
+</figure>
