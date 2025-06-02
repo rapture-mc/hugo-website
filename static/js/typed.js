@@ -1,6 +1,6 @@
 var typed = new Typed("#typedText", {
   strings: [
-      "{{ .Site.Title }}",
+      "Megacorp Industries",
       "linux technologies...",
       "linux anonymity...",
       "linux posts...",
