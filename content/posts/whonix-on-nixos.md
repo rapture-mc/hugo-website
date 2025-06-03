@@ -18,16 +18,16 @@ The typical process for installing Whonix involves:
 Instead of doing this manually we can automate it with some bash scripts and NixOS magic.
 
 To install Virtualbox on NixOS it's as simple as including this one line in your configuration.nix file:
-```
+{{< highlight nix >}}
 {
   # omitted for brevity
 
   virtualisation.virtualbox.host.enable = true;
 }
-```
+{{< /highlight >}}
 
 To download and import NixOS we can create a Bash script that checks for the existence of Whonix and if it doesn't exist download and import the virtual disk image. We can only make this command available on our system by utilizing "pkgs.writeShellScriptBin".
-```
+{{< highlight nix >}}
 { pkgs, ... }: let
 
 whonixVersion = "17.2.3.7";
@@ -73,14 +73,15 @@ in {
     installWhonix
   ];
 }
-```
+{{< /highlight >}}
+
 This will make the command "installWhonix" available on the CLI and ensure Whonix is installed and install it if not.
 
 We can also streamline launching Whonix making it more user friendly by taking advantage of a Linux feature called [desktop entries](https://wiki.archlinux.org/title/Desktop_entries). This will enable us to create a searchable application that can run any program (or script) that we want. NixOS's popular [home-manager](https://github.com/nix-community/home-manager) project has an option called "xdg.desktopEntries" which will let us create our own desktop entries the Nix way.
 
 To begin we first need to define the programs that the desktop entries will call when launched.
 
-```
+{{< highlight nix >}}
 { pkgs, ... }: let
   startWhonix = pkgs.writeShellScriptBin "startWhonix" ''
     VBoxManage startvm Whonix-Gateway-Xfce --type headless
@@ -101,11 +102,12 @@ in {
     stopWhonix
   ];
 }
-```
+{{< /highlight >}}
+
 Above we once again utilize the "writeShellScriptBin" function to create a custom script which calls the VirtualBox cli tool to start the Whonix Gateway headless (no GUI) and allow it to boot for one second before calling the Whonix Workstation. We also create the corresponding script to stop both virtual machines and then add them to our global system packages.
 
 Finally we then create desktop entries using home-manger that calls these scripts so the user doesn't have to open up a terminal and call the scripts manually.
-```
+{{< highlight nix >}}
 _:  # <-- Shorthand for "{ ... }:"
 
 {
@@ -123,5 +125,6 @@ _:  # <-- Shorthand for "{ ... }:"
     };
   };
 }
-```
+{{< /highlight >}}
+
 After rebuilding the system users can then search for "Start Whonix" and "Stop Whonix" in the desktop's search bar instead of launching VirtualBox and starting/stopping the 2x virtual machines!

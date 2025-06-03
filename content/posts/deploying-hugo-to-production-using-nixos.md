@@ -24,6 +24,7 @@ To start I created a new NixOS VM and added the following nginx config to my con
   };
 }
 {{< /highlight >}}
+
 The above code opens TCP port 80 and sets up the nginx service and listens for requests for the domain "megacorp.industries" and will serve files from the "/var/www/megacorp.industries" folder over HTTP on port 80. Note that this code doesn't do any SSL certificates. For that add the following code to the same config file to have the vm also handle SSL certificates like so:
 {{< highlight nix >}}
 # contents of /etc/nixos/configuration.nix
@@ -48,6 +49,7 @@ The above code opens TCP port 80 and sets up the nginx service and listens for r
   };
 }
 {{< /highlight >}}
+
 We have now opened port 443 (for HTTPS) and told nginx to force connections to use SSL (HTTPS) with automatic let's encrypt ACME certificates. Note that the proper DNS and/or port-forwarding must be setup prior or else the ACME service will fail to fetch the SSL certificates and only self-signed certificates will be setup. This is dependent on each setup but for me I had to do the following:
 - Add an A record with my public IP to my domain "megacorp.industries"
 - Set a port forward on my router/firewall (aka my public IP) to forward all traffic on TCP 80/443 to my vm's private IP

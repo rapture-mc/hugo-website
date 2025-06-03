@@ -42,6 +42,7 @@ The first thing I needed to do is install the KVM/QEMU/Libvirt stack on a machin
   # rest of system configuration code...
 }
 {{< /highlight >}}
+
 The above code will install and configure the KVM kernel module, QEMU emulator software and Libvirt API (all of which together provide a full virtualisation solution). It also installs some extra libvirt packages as well as the open-source fork of Terraform "OpenTofu". We use OpenTofu instead of Terraform because Terraform's license is now marked as unfree in nixpkgs.
 
 ### Setting up networking
