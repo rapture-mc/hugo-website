@@ -1,0 +1,10 @@
+<li>
+  <a href="{{ .Permalink }}">
+    {{ .Title | markdownify }}
+      <div>
+        <span class="tag is-dark">{{ .Date.Format "Jan 2, 2006" }}</span>
+        <span class="tag is-link">- {{ .ReadingTime }} Minutes Reading Time</span>
+        <p> </p>
+      </div>
+  </a>
+</li>

@@ -16,3 +16,4 @@ Also bringing Linux to the desktop for the masses! Reap the benefits of open-sou
 
 # Latest posts
 <br>
+{{< recentposts >}}

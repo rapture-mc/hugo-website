@@ -1,0 +1,12 @@
+<div>
+  {{ range first 5 .Site.RegularPages }}
+    <a class="box" href="{{ .Permalink }}">
+      {{ .Title }}
+      <div>
+        <span class="tag is-dark">{{ .Date.Format "Jan 2, 2006" }}</span>
+        <span class="tag is-link">- {{ .ReadingTime }} Minutes Reading Time</span>
+        <p> </p>
+      </div>
+    </a>
+  {{ end }}
+</div>
