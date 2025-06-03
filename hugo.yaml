@@ -27,7 +27,7 @@ params:
       url: https://github.com/rapture-mc
     - icon: fa-solid fa-envelope
       title: Email
-      url: mailto:ben.harris@megacorp.industries
+      url: mailto:ben.r.harris@protonmail.com
 
 markup:
   goldmark:

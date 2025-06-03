@@ -34,4 +34,4 @@ Using Linux can grant you invisiblity online and circumvent censorship in oppres
 
 Megacorp can provide the tools and training to accomplish these goals in a safe and secure manner so you can focus on your own goals without the technical overhead.
 
-For a free consultation [email me](mailto:ben.r.harris@protonmail.com).
+For a free consultation [email me]({{ index .Site.Params.socialLinks 1 "url" }}).
