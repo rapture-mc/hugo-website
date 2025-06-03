@@ -16,6 +16,7 @@ menu:
 
 params:
   noindex: false
+  email: mailto:ben.r.harris@protonmail.com
   theme:
     palette: tokyo-night-dark
   about:
