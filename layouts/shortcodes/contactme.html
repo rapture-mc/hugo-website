@@ -1,0 +1,22 @@
+<form action="https://api.web3forms.com/submit" method="POST">
+
+    <!-- Replace with your Access Key -->
+    <input type="hidden" name="access_key" value="ad9fdc01-61db-4979-8ecd-a1abd5479735">
+
+    <!-- Form Inputs. Each input must have a name="" attribute -->
+    <h1>Name</h1>
+    <input type="text" name="name" required>
+
+    <h1>Email</h1>
+    <input type="email" name="email" required>
+
+    <h1>Message</h1>
+    <textarea name="message" required></textarea>
+
+    <!-- Honeypot Spam Protection -->
+    <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+
+    <br></br>
+    <button type="submit">Submit Form</button>
+
+</form>

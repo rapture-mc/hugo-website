@@ -13,6 +13,10 @@ menu:
       name: Posts
       url: /posts/
       weight: 20
+    - identifier: contact
+      name: Contact
+      url: /contact/
+      weight: 30
 
 params:
   noindex: false
