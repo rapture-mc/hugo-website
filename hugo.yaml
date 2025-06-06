@@ -17,9 +17,9 @@ menu:
       name: Contact
       url: /contact/
       weight: 30
-    - identifier: about
-      name: About
-      url: https://cloak.megacorp.industries
+    - identifier: cv
+      name: CV
+      url: https://cv.megacorp.industries
       weight: 40
 
 params:
