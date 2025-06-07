@@ -2,6 +2,7 @@ baseURL: https://megacorp.industries/
 languageCode: en-us
 title: Megacorp Industries
 theme: risotto
+enableEmoji: true
 
 menu:
   main:
