@@ -37,8 +37,3 @@ params:
     - icon: fa-solid fa-envelope
       title: Email
       url: mailto:ben.r.harris@protonmail.com
-
-markup:
-  goldmark:
-    renderer:
-      unsafe: true
