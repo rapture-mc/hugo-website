@@ -3,6 +3,7 @@ title: "Beginning my webdev journey"
 date: 2025-03-30T19:19:35+09:30
 tags:
 - hugo
+- webdev
 ---
 I've always wanted to build websites but have never been drawn to webdev like I was drawn to Linux so I've generally steered clear. That was until I came across the website [this cute world](https://thiscute.world) while learning about NixOS. I really liked the websites design and in particular the typing title animation and wanted to build my own. The website was built with Hugo so I decided to start with that.
 

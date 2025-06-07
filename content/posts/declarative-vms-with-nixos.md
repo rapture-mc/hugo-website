@@ -1,6 +1,8 @@
 ---
 title: "Declarative VMs With NixOS"
 date: 2025-05-12T13:58:59+09:30
+tags:
+- nixos
 ---
 One thing that I've struggled with since adopting NixOS over a year ago was somehow integrating my virtual machine infrastructure into my NixOS deployments. I wanted to be able to define the virtual machine infrastructure in Nix code exactly how you would define a NixOS system in Nix code too so when you would rebuild the NixOS system it would also create/update any virtual machine infrastructure as well.
 
