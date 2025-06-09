@@ -3,10 +3,13 @@ title: "Services"
 date: 2025-04-02T16:16:21+09:30
 ---
 
-## Free + Open-Source Solutions
+# Free + Open-Source Solutions
 Take advantage of the rich open-source ecosystem and start utilizing free solutions that put control of your data back into your own hands. Solutions suitable for individuals and small businesses alike.
 
-Solutions (to name a few) such as:
+## Desktop Solutions
+Custom built Linux OS for desktop useage. Reliable up-to-date builds using the Nix ecosystem with much of the pain points of Linux/NixOS ironed out to deliver a smooth and easy desktop experience.
+
+## Server Solutions (to name a few) such as:
 > [Bookstack](https://www.bookstackapp.com/) (information management system)
 > - page revisions
 > - diagram support
