@@ -127,7 +127,7 @@ Above I...
 - Declare the variable **pkgs** which import nixpkgs for my system architecture along with the overlays I defined earlier
 - Passed the **pkgs** variable down into the context of my configuration.nix file through the specialArgs option
 
-The final step is to actually apply the overlays to my host configuration. I won't lie this part took a while to figure out essentially at this point we have our modified packages **freerdp** and **guacamole-server** however we also needto tell our NixOS machine to **use** the packages. This is done by referencing them (pkgs.freerdp and pkgs.guacamole-server) in our hosts configuration.nix file like so.
+The final step is to actually apply the overlays to my host configuration. I won't lie this part took a while to figure out but essentially at this point we have our modified packages **freerdp** and **guacamole-server** however we also need to tell our NixOS machine to **use** the packages. This is done by explicitly declaring them (pkgs.freerdp and pkgs.guacamole-server) in our hosts configuration.nix file like so.
 
 {{< highlight nix >}}
 # ./configuration.nix
